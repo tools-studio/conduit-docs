@@ -1,11 +1,18 @@
-[![Unity 6000.0+](https://img.shields.io/badge/Unity-6000.0%2B-57b9d3?logo=unity&logoColor=white)](https://unity.com/releases/lts)
-[![Asset Store](https://img.shields.io/badge/Asset%20Store-Purchase-blue)](https://assetstore.unity.com/publishers/139782)
+<p align="center">
+  <img src="images/cover.jpg" alt="Conduit — Asset Governance Pipeline for Unity" width="760">
+</p>
 
-# Conduit Documentation
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/icon-light.png">
+    <img src="images/icon-dark.png" width="26" alt="">
+  </picture>
+  Conduit
+</h1>
 
-Documentation and issue tracking for [Conduit](https://assetstore.unity.com/publishers/139782), a policy-driven import governance tool for Unity.
+<p align="center">Policy-driven import governance for Unity.</p>
 
-This repository does not contain Conduit's source code. It contains the documentation site and the public issue tracker. For the package itself, see the Asset Store listing or your Package Manager installation.
+Documentation and issue tracking for [Conduit](https://assetstore.unity.com/publishers/139782). This repository does not contain Conduit's source code — it holds the documentation site and the public issue tracker. For the package itself, see the Asset Store listing or your Package Manager installation.
 
 ## Start here
 
@@ -52,9 +59,9 @@ New to Conduit? Read these in order:
 
 ## Support
 
-[support.toolsstudio@gmail.com](mailto:support.toolsstudio@gmail.com) ·
-[Report an issue](https://github.com/toolsstudio/conduit-docs/issues) ·
-[Request a feature](https://github.com/toolsstudio/conduit-docs/issues) ·
-[Community](https://discord.gg/VrbxQ9vnrT)
+[Email Support](mailto:support.toolsstudio@gmail.com) ·
+[Report an Issue](https://github.com/toolsstudio/conduit-docs/issues) ·
+[Request a Feature](https://github.com/toolsstudio/conduit-docs/issues) ·
+[Community Discord](https://discord.gg/VrbxQ9vnrT)
 
 See [Support](support/report-issues.md) for the full workflow.

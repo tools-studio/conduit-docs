@@ -22,4 +22,4 @@ Yes. `ImportPolicy` assets are ordinary Unity assets and commit like any other. 
 No. Drift scans run asynchronously and yield periodically, so the Editor UI stays responsive during a scan. The Build Gate's check, which runs at build time, is synchronous by design — see [Build Gate](build-gate.md).
 
 **Where do I ask something not covered here?**
-See [Report Issues](../support/report-issues.md) or the [Community](https://discord.gg/VrbxQ9vnrT) Discord.
+See [Report Issues](../support/report-issues.md) or the [Community Discord](https://discord.gg/VrbxQ9vnrT).
