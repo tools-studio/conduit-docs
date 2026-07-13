@@ -5,7 +5,7 @@
 <h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="images/icon-light.png">
-    <img src="images/icon-dark.png" width="50" alt="">
+    <img src="images/icon-dark.png" width="72" alt="" style="vertical-align:-14px; margin-right:12px;">
   </picture>
   Conduit
 </h1>
