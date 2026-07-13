@@ -2,7 +2,7 @@
 
 | Link | Use for |
 |---|---|
-| [Email Support](mailto:support.toolsstudio@gmail.com) | Direct support, account or purchase questions |
+| [Email Support](mailto:support.toolsstudio@gmail.com) | Direct support and general questions |
 | [Report an Issue](https://github.com/toolsstudio/conduit-docs/issues) | Bugs — see [Report Issues](report-issues.md) |
 | [Request a Feature](https://github.com/toolsstudio/conduit-docs/issues) | Feature ideas — see [Feature Requests](feature-requests.md) |
 | [Community Discord](https://discord.gg/VrbxQ9vnrT) | General discussion, questions, and other Tools Studio users |

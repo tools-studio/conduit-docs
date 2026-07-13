@@ -1,9 +1,25 @@
-This repository contains documentation for Conduit, a Unity Asset Store product. It does not contain Conduit's source code.
+MIT License
 
-## Documentation license
+Copyright (c) 2026 Tools Studio
 
-The contents of this repository (Markdown files, diagrams, and other documentation assets) are Copyright (c) 2026 Tools Studio. You may read, link to, and quote this documentation for the purpose of using or evaluating Conduit. You may not republish this documentation as your own or as documentation for a different product.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Conduit software license
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Conduit itself ships under the Tools Studio Commercial License, included as `LICENSE.md` inside the package you install from the Asset Store or Package Manager. That license — not this one — governs your use of Conduit's code. In summary: Conduit is a paid product. Purchasing it grants you a non-exclusive, non-transferable license to use and modify it in your own projects; it does not grant the right to redistribute or resell Conduit itself. See the package's own `LICENSE.md` for the complete terms, which are subject to the [Unity Asset Store EULA](https://unity.com/legal/as-terms).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This applies to Conduit itself, wherever you obtained it (Asset Store, Package Manager, or source). This repository's documentation content is covered by the same license.

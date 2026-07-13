@@ -16,6 +16,7 @@ This is a user-facing summary. The complete, detailed changelog ships inside the
 
 ### Changed
 - Demo assets are generated on demand instead of shipping as binary files, reducing package size significantly.
+- **License changed to MIT.** Conduit is now free and open source. See [LICENSE.md](../LICENSE.md).
 
 ## 1.0.0 — 2026-06-09
 
