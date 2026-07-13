@@ -2,11 +2,14 @@
   <img src="images/cover.jpg" alt="Conduit — Asset Governance Pipeline for Unity" width="760">
 </p>
 
-<h1 align="center">
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="images/icon-light.png">
-    <img src="images/icon-dark.png" width="72" alt="" style="vertical-align:-14px; margin-right:12px;">
+    <img src="images/icon-dark.png" width="72" alt="Conduit">
   </picture>
+</p>
+
+<h1 align="center">
   Conduit
 </h1>
 
