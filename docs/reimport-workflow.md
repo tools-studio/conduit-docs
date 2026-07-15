@@ -2,6 +2,12 @@
 
 The **Reimport** tab applies policy to a chosen set of assets and reimports them, independent of a drift scan.
 
+<p align="center">
+  <img src="../images/screenshot-03-reimport.png" width="800" alt="Conduit full and targeted reimport workflow">
+</p>
+
+Shows both modes: a full reimport across every governed asset in scope (top), and a targeted reimport limited to only the assets a Drift scan flagged (bottom) — each with a before/after size summary once it runs.
+
 ## Scope
 
 Filter by asset type — All, Texture, Model, or Audio — and optionally limit the list to drifting assets only, which requires a Drift scan to have run first. Click **Refresh List** to populate the list under the current filter.

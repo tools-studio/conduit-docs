@@ -4,9 +4,9 @@
 
 | Conduit version | Unity requirement | Status |
 |---|---|---|
-| 1.0.0 | 6000.0 LTS or later | Current |
+| 1.0.0 | 6000.0 or later | Current |
 
-Conduit targets Unity 6000.0 LTS and later exclusively. Earlier Unity versions (2022 LTS and prior) are not supported and have not been tested — several APIs Conduit depends on (including current `AudioImporterSampleSettings` behavior) changed in Unity 6.
+Conduit targets Unity 6000.0 and later exclusively. Earlier Unity versions (2022 LTS and prior) are not supported and have not been tested — several APIs Conduit depends on (including current `AudioImporterSampleSettings` behavior) changed in Unity 6.
 
 ## Versioning
 

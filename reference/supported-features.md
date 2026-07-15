@@ -1,5 +1,11 @@
 # Supported Features
 
+<p align="center">
+  <img src="../images/screenshot-05-rule-coverage.png" width="800" alt="Full Model, Texture, Audio, and LOD rule coverage alongside Conduit project settings">
+</p>
+
+Shows the full set of Model, Texture, Audio, and LOD Generation rules Conduit can enforce, alongside the Conduit Settings panel where Conduit is enabled or disabled project-wide, the Build Gate can be suppressed on CI, and specific folders can be excluded from scanning.
+
 ## Governed today
 
 | Category | Governed via | Details |

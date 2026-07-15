@@ -2,6 +2,12 @@
 
 The **Simulation** tab answers one question: for a specific asset, what would Conduit apply right now, and which policy decided each value?
 
+<p align="center">
+  <img src="../images/screenshot-02-drift-and-simulation.png" width="800" alt="Conduit import simulation cascade trace" />
+</p>
+
+Shows the Simulation tab (bottom panel) after simulating an asset: every governed property is listed with its effective value and the exact policy asset and folder it was inherited from.
+
 ## Running a simulation
 
 Drag an asset into the drop target, or type its path into the Asset Path field, and click **Simulate**. Conduit resolves the full policy chain for that asset's folder — same resolution logic used for import-time application and drift scanning — and shows every governed property with the value that would be applied and the name of the policy that set it.

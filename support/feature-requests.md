@@ -4,12 +4,12 @@ Feature requests go to the same [GitHub Issues](https://github.com/toolsstudio/c
 
 ## Why GitHub Issues, not Discord
 
-A feature request needs to be findable months later — by you, checking whether it's been picked up, and by other users, checking whether their idea has already been suggested before opening a duplicate. GitHub Issues is searchable, linkable, and supports 👍 reactions as a lightweight signal of demand. A chat message in Discord serves real-time discussion well, but it isn't built for tracking a request over the months it might take to reach a release — see [Roadmap](../release/roadmap.md) for what that timeline typically looks like.
+A feature request needs to be findable months later — by you, checking whether it's been picked up, and by other users, checking whether their idea has already been suggested before opening a duplicate. GitHub Issues is searchable, linkable, and supports upvote reactions as a lightweight signal of demand. A chat message in Discord serves real-time discussion well, but it isn't built for tracking a request over the months it might take to reach a release — see [Roadmap](../release/roadmap.md) for what that timeline typically looks like.
 
 ## Before opening a request
 
 - Check the [Roadmap](../release/roadmap.md) — it might already be planned.
-- Search existing issues for the same idea, and add a 👍 instead of opening a duplicate if you find one.
+- Search existing issues for the same idea, and add an upvote instead of opening a duplicate if you find one.
 
 ## What makes a good request
 

@@ -2,6 +2,12 @@
 
 Audio Rules govern `AudioImporter` settings. Each rule is opt-in — check it to enforce it, leave it unchecked to ignore that property entirely.
 
+<p align="center">
+  <img src="../images/screenshot-04-before-after.png" width="800" alt="Audio import settings before and after a Conduit policy is applied">
+</p>
+
+Shows the same audio clip's Inspector before a policy is applied (left) and after (right). Force To Mono, Load Type, Compression Format, and Sample Rate Setting all update to match the governing policy, and the file's imported size drops accordingly.
+
 | Rule | Governs | Notes |
 |---|---|---|
 | Default Load Type | `defaultSampleSettings.loadType` | Decompress On Load, Compressed In Memory, or Streaming. |

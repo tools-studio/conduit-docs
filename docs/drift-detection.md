@@ -2,6 +2,12 @@
 
 The **Drift** tab scans your project and reports every governed asset whose current import settings don't match its policy.
 
+<p align="center">
+  <img src="../images/screenshot-02-drift-and-simulation.png" width="800" alt="Conduit drift scan results and import simulation cascade trace">
+</p>
+
+Shows the Drift tab after a scan: each row is one property violation, listing the asset, the property, its expected value, its actual value, and the policy responsible — with a one-click **Fix** alongside each one.
+
 ## Running a scan
 
 Click **Scan Project**. Conduit walks every texture, model, and audio asset under a policy, resolves the expected value for each governed property, and compares it against the asset's actual importer settings. The result is a list of violations, each showing the asset, the property, the expected value, the actual value, and which policy set the expectation.

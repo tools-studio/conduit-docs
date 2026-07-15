@@ -2,6 +2,12 @@
 
 The **Policies** tab shows your project's folder tree on the left and the selected folder's policy on the right.
 
+<p align="center">
+  <img src="../images/screenshot-01-policies.png" width="800" alt="Conduit policy editor showing folder-scoped audio rules">
+</p>
+
+Shows a folder governed by an Audio policy: the tree on the left indicates policy coverage, and the panel on the right toggles individual rules — each rule is opt-in, and the whole policy carries one enforcement level.
+
 ## Creating a policy
 
 Select any folder and click **Add Policy for This Folder**. This creates an `ImportPolicy` asset under `Assets/Conduit/Policies/` targeting that folder. A folder without a policy shows an empty state instead of an inspector.

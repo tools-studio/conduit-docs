@@ -2,7 +2,7 @@
 
 ## Project settings
 
-Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools Studio › Conduit › Open Window › ⚙ Settings**.
+Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools Studio › Conduit › Open Window › Settings (gear icon)**.
 
 | Setting | Default | Purpose |
 |---|---|---|

@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Unity 6000.0 LTS or later
+- Unity 6000.0 or later
 - No additional packages required
 
 ## Asset Store
