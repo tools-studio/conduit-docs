@@ -2,8 +2,10 @@
 
 ## Requirements
 
-- Unity 6000.0 or later
+- Unity 2021.3 LTS or later, through Unity 6000.x (build-verified against 6000.3.10f1)
 - No additional packages required
+
+See [Unity Compatibility](../release/version-history.md#unity-compatibility) for the full verified version matrix.
 
 ## Asset Store
 

@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="https://assetstore.unity.com/publishers/139782"><img src="https://img.shields.io/badge/-UNITY%20ASSET%20STORE-131316?style=for-the-badge&logo=unity&logoColor=F8F8FC" alt="Unity Asset Store"></a>
+  <a href="https://github.com/Afterix-Hub/conduit"><img src="https://img.shields.io/badge/-GITHUB-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Source on GitHub"></a>
 </p>
 
 <p align="center">
@@ -15,14 +16,14 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Unity-6000.0%2B-131316?logo=unity&logoColor=white" alt="Unity 6000.0+">
+  <img src="https://img.shields.io/badge/Unity-2021.3%2B-131316?logo=unity&logoColor=white" alt="Unity 2021.3+">
   <img src="https://img.shields.io/badge/Version-1.0.0-131316" alt="Version 1.0.0">
   <img src="https://img.shields.io/badge/License-Free-131316" alt="Free license">
 </p>
 
 ---
 
-Documentation and issue tracking for Conduit. This repository does not contain Conduit's source code — it holds the documentation site and the public issue tracker. For the package itself, use the Unity Asset Store button above or your Package Manager installation.
+Documentation and issue tracking for Conduit. This repository does not contain Conduit's source code — it holds the documentation site and the public issue tracker. Get the package from the Unity Asset Store button above, or browse the source on GitHub.
 
 ## Screenshots
 
@@ -77,6 +78,18 @@ Every governed property, and the project-wide settings that control how Conduit 
 **What this shows:** the full set of Model, Texture, Audio, and LOD Generation rules Conduit can enforce, alongside the Conduit Settings panel — where Conduit can be enabled or disabled project-wide, the Build Gate can be suppressed on CI, and specific folders can be excluded from scanning entirely.
 
 ---
+
+## Unity Compatibility
+
+| Unity Version | Support Status | Notes |
+|---|---|---|
+| **2021.3 LTS** | **Supported — minimum** | Requires two documented compatibility shims. |
+| 2022.3 LTS | Supported | No API differences from 2021.3 for anything Conduit uses. |
+| 2023.x | Supported | No API differences from 2021.3 for anything Conduit uses. |
+| Unity 6000.x | Supported | Build-verified against 6000.3.10f1. |
+| Unity 7.x / future majors | Unknown | Not evaluated. |
+
+Render pipeline (URP/HDRP/Built-in) does not affect compatibility — Conduit operates entirely on the asset-import layer. Full detail, including both compatibility shims and the audit method, is in [Version History](release/version-history.md#unity-compatibility).
 
 ## Start here
 

@@ -25,7 +25,7 @@ Below these, three collapsible rule sets — Texture Rules, Model Rules, Audio R
 
 ## Conflicts
 
-Two policies cannot both target the same folder. If this happens — usually from a merge or a copy-pasted policy asset — Conduit shows a warning banner in the Policies tab and a one-time dialog on project load naming how many folders are affected. Conduit uses the first policy found for each conflicted folder until you remove the duplicate; behavior is not guaranteed to be consistent between sessions while a conflict exists.
+Two policies cannot both target the same folder. If this happens — usually from a merge or a copy-pasted policy asset — Conduit shows a warning banner in the Policies tab and a one-time dialog on project load naming how many folders are affected. Resolution is deterministic: policy asset paths are sorted, and the lexicographically lowest path wins for each conflicted folder — the same policy wins every time, on every machine, until you remove or retarget the duplicate.
 
 ## Editing a policy
 

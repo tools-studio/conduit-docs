@@ -1,5 +1,7 @@
 # Supported Features
 
+Conduit requires Unity 2021.3 LTS or later, through Unity 6000.x (build-verified against 6000.3.10f1). See [Unity Compatibility](../release/version-history.md#unity-compatibility) for the full version matrix, compatibility shims, and render-pipeline notes.
+
 <p align="center">
   <img src="../images/screenshot-05-rule-coverage.png" width="800" alt="Full Model, Texture, Audio, and LOD rule coverage alongside Conduit project settings">
 </p>

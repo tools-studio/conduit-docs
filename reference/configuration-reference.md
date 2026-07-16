@@ -18,29 +18,45 @@ Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it 
 |---|---|
 | `CONDUIT_CI_SKIP` | Combined with the Suppress Build Gate On CI setting above, skips the build gate. Set this only on the specific CI configuration that runs Conduit's gate check as its own separate step. |
 
+## CIBridge command-line arguments
+
+| Argument | Effect |
+|---|---|
+| `-conduitReport <path>` | Writes the JSON report to the given path. If omitted, no report file is written. |
+| `-conduitFolder <path>` | Scopes the scan to one folder instead of the whole project. |
+| `-conduitWarnAsError` | Treats `Warn Only` violations as blocking for this run — exit code `1` is returned if any exist, even though they wouldn't block an interactive build. |
+
 ## CIBridge JSON report
 
 `CIBridge.Run()` (see [Build Gate](../docs/build-gate.md)) writes a JSON report to the path given via `-conduitReport`:
 
 ```json
 {
-  "violationCount": 2,
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-06-09T12:00:00.0000000Z",
+  "wasCompleted": true,
+  "summary": {
+    "totalViolations": 2,
+    "blockingViolations": 1,
+    "warnOnlyViolations": 1
+  },
   "violations": [
     {
       "assetPath": "Assets/Textures/UI/icon.png",
       "propertyName": "maxTextureSize",
-      "expectedValue": "512",
-      "actualValue": "2048",
-      "governingPolicyName": "UI Textures"
+      "expected": "512",
+      "actual": "2048"
     }
   ]
 }
 ```
 
+`summary.blockingViolations` counts violations under a `Block Build` policy; `summary.warnOnlyViolations` counts violations under a `Warn Only` policy. `wasCompleted` is `false` if the scan was interrupted before finishing.
+
 ## CIBridge exit codes
 
 | Code | Meaning |
 |---|---|
-| 0 | No blocking violations. |
-| 1 | One or more `Block Build` violations found. See the JSON report. |
+| 0 | No blocking violations (or Conduit is disabled project-wide). |
+| 1 | One or more `Block Build` violations found, or `Warn Only` violations found with `-conduitWarnAsError` set. See the JSON report. |
 | 2 | The scan itself failed to complete. Check the Editor log for the underlying error. |

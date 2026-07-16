@@ -6,7 +6,7 @@ This is the Build Gate working as configured — see [Build Gate](build-gate.md)
 
 ## "Conduit — Policy Conflict" appears on project load
 
-Two or more `ImportPolicy` assets target the same folder. Conduit uses the first one it finds until this is resolved, which makes behavior between sessions unreliable. Open the Policies tab, find the conflicted folder, and delete or retarget the duplicate policy.
+Two or more `ImportPolicy` assets target the same folder. Conduit resolves this deterministically — the policy with the lexicographically lowest asset path wins, consistently across sessions and machines — but it's still worth cleaning up. Open the Policies tab, find the conflicted folder, and delete or retarget the duplicate policy.
 
 ## An asset isn't picking up policy changes
 

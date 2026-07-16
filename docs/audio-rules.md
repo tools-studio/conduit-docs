@@ -27,6 +27,10 @@ Two settings visible in Unity's own Audio Import Settings inspector are delibera
 
 **Ambisonic.** This flags a clip as 360° B-format surround audio — a fact about how the source was recorded, not an import convention. A folder policy can't know whether a given clip actually is ambisonic content; applying this setting to an ordinary stereo or mono clip produces broken playback.
 
+## Per-platform overrides
+
+Beyond the default settings above, an audio policy can hold a list of per-platform overrides (Load Type, Compression Format, and Compression Quality), keyed by platform name — `iPhone`, `Android`, and so on, matching Unity's own platform tab names. These apply on top of the default settings for that one platform, the same way Unity's own per-platform tabs work. Platform overrides appear as a standard list in the policy inspector; there's no dedicated per-platform UI yet, so add entries by platform name exactly as Unity's Audio Importer names them.
+
 ## A typical setup
 
 An SFX folder commonly wants Force To Mono on and Compression Format set to Vorbis with a moderate quality value. A music or ambience folder commonly wants Load Type set to Streaming and Load In Background on, so a long track doesn't cause a hitch when a scene loads.
