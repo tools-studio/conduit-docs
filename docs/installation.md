@@ -7,15 +7,17 @@
 
 See [Unity Compatibility](../release/version-history.md#unity-compatibility) for the full verified version matrix.
 
-## Asset Store
-
-Import Conduit from the [Asset Store](https://assetstore.unity.com/publishers/139782) via the Package Manager's My Assets tab.
-
 ## Unity Package Manager (Git URL)
 
 Open **Window › Package Manager**, click **+**, select **Add package from git URL**, and enter:
 
-    https://github.com/Afterix-Hub/conduit.git
+    https://github.com/afterix-hub/conduit.git?path=/Assets/Conduit
+
+The `path` query is required — Conduit's `package.json` lives at `Assets/Conduit` within the repository, not at its root.
+
+## Asset Store
+
+A Unity Asset Store listing is planned but not yet live — see [Roadmap](../release/roadmap.md). Once it ships, Conduit will be importable from the Package Manager's My Assets tab like any other Asset Store package.
 
 ## Verifying the install
 

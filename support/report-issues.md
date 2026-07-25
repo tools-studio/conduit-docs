@@ -1,6 +1,6 @@
 # Report Issues
 
-Bug reports go to the [GitHub Issues](https://github.com/toolsstudio/conduit-docs/issues) tracker.
+Bug reports go to the [GitHub Issues](https://github.com/afterix-hub/conduit/issues) tracker on the source repository.
 
 ## Before opening an issue
 

@@ -17,6 +17,15 @@ Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it 
 | Define | Effect |
 |---|---|
 | `CONDUIT_CI_SKIP` | Combined with the Suppress Build Gate On CI setting above, skips the build gate. Set this only on the specific CI configuration that runs Conduit's gate check as its own separate step. |
+| `CONDUIT_DEBUG` | Enables `[INFO]` and `[WARN]` diagnostic logging in addition to errors. Set via **Edit › Project Settings › Player › Scripting Define Symbols**. |
+
+## Console error messages
+
+| Message | Meaning |
+|---|---|
+| `[TS][Conduit][ERROR] Scan failed.` | `DriftScanner.ScanAsync()` threw an unhandled exception. Full stack trace follows in the console entry. |
+| `[TS][Conduit][ERROR] Gate check failed.` | The build gate's scan task faulted. Full stack trace follows in the console entry. |
+| `[TS][Conduit][ERROR] Reimport failed.` | `ReimportCoordinator` threw during a reimport. Check the affected asset's path and write permissions. |
 
 ## CIBridge command-line arguments
 

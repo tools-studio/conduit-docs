@@ -1,6 +1,6 @@
 # Feature Requests
 
-Feature requests go to the same [GitHub Issues](https://github.com/toolsstudio/conduit-docs/issues) tracker as bug reports, using the **Feature Request** template.
+Feature requests go to the same [GitHub Issues](https://github.com/afterix-hub/conduit/issues) tracker as bug reports, using the **Feature Request** template.
 
 ## Why GitHub Issues, not Discord
 

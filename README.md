@@ -6,8 +6,7 @@
 <p align="center"><b>Policy-driven asset import governance for Unity.</b></p>
 
 <p align="center">
-  <a href="https://assetstore.unity.com/publishers/139782"><img src="https://img.shields.io/badge/-UNITY%20ASSET%20STORE-131316?style=for-the-badge&logo=unity&logoColor=F8F8FC" alt="Unity Asset Store"></a>
-  <a href="https://github.com/Afterix-Hub/conduit"><img src="https://img.shields.io/badge/-GITHUB-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Source on GitHub"></a>
+  <a href="https://github.com/afterix-hub/conduit"><img src="https://img.shields.io/badge/-GITHUB-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Source on GitHub"></a>
 </p>
 
 <p align="center">
@@ -23,7 +22,7 @@
 
 ---
 
-Documentation and issue tracking for Conduit. This repository does not contain Conduit's source code — it holds the documentation site and the public issue tracker. Get the package from the Unity Asset Store button above, or browse the source on GitHub.
+Documentation for Conduit. This repository does not contain Conduit's source code — it holds the documentation site. Get the package from the [source repository](https://github.com/afterix-hub/conduit) above; a Unity Asset Store listing is planned but not yet live — see [Roadmap](release/roadmap.md).
 
 ## Screenshots
 
@@ -137,8 +136,8 @@ New to Conduit? Read these in order:
 ## Support
 
 <p align="center">
-  <a href="https://github.com/toolsstudio/conduit-docs/issues"><img src="https://img.shields.io/badge/-Report%20an%20Issue-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Report an Issue"></a>
-  <a href="https://github.com/toolsstudio/conduit-docs/issues"><img src="https://img.shields.io/badge/-Request%20a%20Feature-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Request a Feature"></a>
+  <a href="https://github.com/afterix-hub/conduit/issues"><img src="https://img.shields.io/badge/-Report%20an%20Issue-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Report an Issue"></a>
+  <a href="https://github.com/afterix-hub/conduit/issues"><img src="https://img.shields.io/badge/-Request%20a%20Feature-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Request a Feature"></a>
 </p>
 
 <p align="center">

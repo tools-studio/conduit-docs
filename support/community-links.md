@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/toolsstudio/conduit-docs/issues"><img src="https://img.shields.io/badge/-Report%20an%20Issue-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Report an Issue"></a>
-  <a href="https://github.com/toolsstudio/conduit-docs/issues"><img src="https://img.shields.io/badge/-Request%20a%20Feature-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Request a Feature"></a>
+  <a href="https://github.com/afterix-hub/conduit/issues"><img src="https://img.shields.io/badge/-Report%20an%20Issue-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Report an Issue"></a>
+  <a href="https://github.com/afterix-hub/conduit/issues"><img src="https://img.shields.io/badge/-Request%20a%20Feature-131316?style=for-the-badge&logo=github&logoColor=F8F8FC" alt="Request a Feature"></a>
 </p>
 
 | Button | Use for |

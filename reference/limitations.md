@@ -23,3 +23,7 @@ Unlike Texture Rules and Audio Rules, Model Rules apply the same values across e
 ## Two audio settings are intentionally excluded
 
 Normalize and Ambisonic are visible in Unity's own Audio Import Settings but aren't exposed as Conduit rules — see [Audio Rules](../docs/audio-rules.md) for why. This isn't a gap to be filled later; it's a deliberate exclusion based on what's safe to apply automatically across a folder.
+
+## Out of scope, not on the roadmap
+
+Two ideas come up occasionally and are worth addressing directly: **AI-assisted policy suggestion** (generating a starting policy from a folder's existing assets) and **source-control PR integration** (surfacing drift or policy changes as part of a pull request). Neither is planned — see [Roadmap](../release/roadmap.md) for what actually is. Both would be substantial, separate efforts rather than incremental additions to the current architecture, so they're noted here as deliberately out of scope rather than left unaddressed.
