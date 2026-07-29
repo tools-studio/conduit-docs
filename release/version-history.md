@@ -43,4 +43,4 @@ Conduit follows [Semantic Versioning](https://semver.org/): a major version bump
 
 ## Upgrading
 
-Minor and patch upgrades within Conduit 1.x require no migration steps — existing `ImportPolicy` assets and project settings continue to work unchanged, since new rule fields are always opt-in by default. A future major version that introduces breaking changes will ship with its own migration guide, linked from [Changelog](../CHANGELOG.md) at that point.
+Minor and patch upgrades within Conduit 1.x require no migration steps — existing `ImportPolicy` assets and project settings continue to work unchanged, since new rule fields are always opt-in by default. A future major version that introduces breaking changes will ship with its own migration guide, linked from [Changelog](https://github.com/afterix-hub/conduit/blob/main/CHANGELOG.md) at that point.

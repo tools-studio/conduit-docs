@@ -129,7 +129,7 @@ New to Conduit? Read these in order:
 
 | Topic | |
 |---|---|
-| [Changelog](CHANGELOG.md) | What changed, by version |
+| [Changelog](https://github.com/afterix-hub/conduit/blob/main/CHANGELOG.md) | What changed, by version |
 | [Roadmap](release/roadmap.md) | What's planned |
 | [Version History](release/version-history.md) | Compatibility across Unity versions |
 

@@ -1,6 +1,6 @@
 # Roadmap
 
-This is what's planned, not what's shipped — see [Changelog](../CHANGELOG.md) for what's actually released. Dates aren't committed; version numbers and scope may change before release.
+This is what's planned, not what's shipped — see [Changelog](https://github.com/afterix-hub/conduit/blob/main/CHANGELOG.md) for what's actually released. Dates aren't committed; version numbers and scope may change before release.
 
 ## 1.1.0
 
@@ -16,7 +16,7 @@ This is what's planned, not what's shipped — see [Changelog](../CHANGELOG.md) 
 
 ## How this list changes
 
-Planned items move to [Changelog](../CHANGELOG.md) once released. This page reflects the current plan at the time you're reading it — check the [Changelog](../CHANGELOG.md) for what's actually available in the version you have installed.
+Planned items move to [Changelog](https://github.com/afterix-hub/conduit/blob/main/CHANGELOG.md) once released. This page reflects the current plan at the time you're reading it — check the [Changelog](https://github.com/afterix-hub/conduit/blob/main/CHANGELOG.md) for what's actually available in the version you have installed.
 
 ## Suggesting something not listed here
 
