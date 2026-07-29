@@ -2,7 +2,7 @@
 
 ## Project settings
 
-Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools Studio › Conduit › Open Window › Settings (gear icon)**.
+Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools › Conduit › Open Window › Settings (gear icon)**.
 
 | Setting | Default | Purpose |
 |---|---|---|
@@ -37,7 +37,7 @@ Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it 
 
 ## CIBridge JSON report
 
-`CIBridge.Run()` (see [Build Gate](../docs/build-gate.md)) writes a JSON report to the path given via `-conduitReport`:
+`CIBridge.Run()` (see [Build Gate](features/build-gate.md)) writes a JSON report to the path given via `-conduitReport`:
 
 ```json
 {

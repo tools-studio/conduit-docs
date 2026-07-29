@@ -16,7 +16,7 @@ Resolves the full cascading policy chain for a path and returns the merged resul
 SimulationResult result = Conduit.Simulate("Assets/Textures/UI/icon.png");
 ```
 
-Returns the same information the Simulation tab shows: every governed property, its resolved value, and which policy set it. Read-only — see [Simulation](../docs/simulation.md).
+Returns the same information the Simulation tab shows: every governed property, its resolved value, and which policy set it. Read-only — see [Simulation](features/simulation.md).
 
 ## Drift scanning
 
@@ -34,7 +34,7 @@ ReimportResult result = await Conduit.ReimportAssetsAsync(new[] { "Assets/Textur
 ReimportResult result = await Conduit.ReimportDriftingAssetsAsync(report);
 ```
 
-Applies policy and reimports the given assets, or every asset present in a `DriftReport`. This is the scripted equivalent of the Reimport tab's Apply Policy + Reimport action — it overwrites current import settings the same way. See [Reimport Workflow](../docs/reimport-workflow.md).
+Applies policy and reimports the given assets, or every asset present in a `DriftReport`. This is the scripted equivalent of the Reimport tab's Apply Policy + Reimport action — it overwrites current import settings the same way. See [Reimport Workflow](features/reimport-workflow.md).
 
 ## Build Gate
 
@@ -43,7 +43,7 @@ GateValidationResult result = Conduit.RunBuildGateCheck();
 if (result.WillBlockBuild) { /* ... */ }
 ```
 
-Runs the same synchronous, non-blocking check Unity's build pipeline runs automatically via `IPreprocessBuildWithReport`. Useful for a custom pre-build script that wants to check gate status without triggering an actual build. See [Build Gate](../docs/build-gate.md).
+Runs the same synchronous, non-blocking check Unity's build pipeline runs automatically via `IPreprocessBuildWithReport`. Useful for a custom pre-build script that wants to check gate status without triggering an actual build. See [Build Gate](features/build-gate.md).
 
 ## Settings
 
@@ -56,4 +56,4 @@ bool enabled = Conduit.IsEnabled;
 
 ## Return types
 
-`ResolvedPolicy`, `SimulationResult`, `DriftReport`, `ReimportResult`, and `GateValidationResult` are plain data types — no methods, safe to inspect and serialize for your own reporting. See [Configuration Reference](configuration-reference.md) for the JSON shape used by `CIBridge`, which mirrors `DriftReport` and `GateValidationResult` closely.
+`ResolvedPolicy`, `SimulationResult`, `DriftReport`, `ReimportResult`, and `GateValidationResult` are plain data types — no methods, safe to inspect and serialize for your own reporting. See [Configuration Reference](configuration.md) for the JSON shape used by `CIBridge`, which mirrors `DriftReport` and `GateValidationResult` closely.

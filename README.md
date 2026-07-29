@@ -94,24 +94,24 @@ Render pipeline (URP/HDRP/Built-in) does not affect compatibility — Conduit op
 
 New to Conduit? Read these in order:
 
-1. [Getting Started](docs/getting-started.md)
+1. [Overview](docs/overview.md)
 2. [Installation](docs/installation.md)
-3. [Quick Start](docs/quick-start.md)
+3. [Getting Started](docs/getting-started.md)
 4. [Core Concepts](docs/core-concepts.md)
 
 ## Documentation
 
 | Topic | |
 |---|---|
-| [Policies](docs/policies.md) | How folder-scoped rules cascade |
-| [Texture Rules](docs/texture-rules.md) | Governing texture import settings |
-| [Audio Rules](docs/audio-rules.md) | Governing audio import settings |
-| [Model Rules](docs/model-rules.md) | Governing model import settings |
-| [Drift Detection](docs/drift-detection.md) | Finding assets out of compliance |
-| [Simulation](docs/simulation.md) | Previewing policy effects before applying them |
-| [Reimport Workflow](docs/reimport-workflow.md) | Applying policy to drifting assets |
-| [Build Gate](docs/build-gate.md) | Blocking non-compliant builds |
-| [Demo Workflow](docs/demo-workflow.md) | Installing sample content to try Conduit |
+| [Policies](docs/features/policies.md) | How folder-scoped rules cascade |
+| [Texture Rules](docs/features/texture-rules.md) | Governing texture import settings |
+| [Audio Rules](docs/features/audio-rules.md) | Governing audio import settings |
+| [Model Rules](docs/features/model-rules.md) | Governing model import settings |
+| [Drift Detection](docs/features/drift-detection.md) | Finding assets out of compliance |
+| [Simulation](docs/features/simulation.md) | Previewing policy effects before applying them |
+| [Reimport Workflow](docs/features/reimport-workflow.md) | Applying policy to drifting assets |
+| [Build Gate](docs/features/build-gate.md) | Blocking non-compliant builds |
+| [Demo Workflow](docs/features/demo-workflow.md) | Installing sample content to try Conduit |
 | [Troubleshooting](docs/troubleshooting.md) | Common problems and fixes |
 | [FAQ](docs/faq.md) | Short answers to common questions |
 
@@ -119,17 +119,17 @@ New to Conduit? Read these in order:
 
 | Topic | |
 |---|---|
-| [API Overview](reference/api-overview.md) | The `Conduit` static facade for scripted access |
-| [Architecture Overview](reference/architecture-overview.md) | How the pipeline fits together |
-| [Configuration Reference](reference/configuration-reference.md) | Every project setting |
-| [Supported Features](reference/supported-features.md) | What Conduit governs today |
-| [Limitations](reference/limitations.md) | What Conduit doesn't do, and why |
+| [API Reference](docs/api-reference.md) | The `Conduit` static facade for scripted access |
+| [Architecture Overview](docs/architecture-overview.md) | How the pipeline fits together |
+| [Configuration Reference](docs/configuration.md) | Every project setting |
+| [Supported Features](docs/supported-features.md) | What Conduit governs today |
+| [Limitations](docs/limitations.md) | What Conduit doesn't do, and why |
 
 ## Release
 
 | Topic | |
 |---|---|
-| [Changelog](release/changelog.md) | What changed, by version |
+| [Changelog](CHANGELOG.md) | What changed, by version |
 | [Roadmap](release/roadmap.md) | What's planned |
 | [Version History](release/version-history.md) | Compatibility across Unity versions |
 

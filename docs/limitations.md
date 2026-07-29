@@ -14,7 +14,7 @@ A policy governs a folder; there's no way to exempt one specific asset within an
 
 ## No continuous watching of already-imported assets
 
-Conduit applies policy at import time and on an explicit Reimport or Fix action. It does not run in the background checking already-imported assets against policy changes as they happen — run a Drift scan after changing a policy to see what's now out of scope. See [Reimport Workflow](../docs/reimport-workflow.md).
+Conduit applies policy at import time and on an explicit Reimport or Fix action. It does not run in the background checking already-imported assets against policy changes as they happen — run a Drift scan after changing a policy to see what's now out of scope. See [Reimport Workflow](features/reimport-workflow.md).
 
 ## Model Rules have no per-platform overrides
 
@@ -22,7 +22,7 @@ Unlike Texture Rules and Audio Rules, Model Rules apply the same values across e
 
 ## Two audio settings are intentionally excluded
 
-Normalize and Ambisonic are visible in Unity's own Audio Import Settings but aren't exposed as Conduit rules — see [Audio Rules](../docs/audio-rules.md) for why. This isn't a gap to be filled later; it's a deliberate exclusion based on what's safe to apply automatically across a folder.
+Normalize and Ambisonic are visible in Unity's own Audio Import Settings but aren't exposed as Conduit rules — see [Audio Rules](features/audio-rules.md) for why. This isn't a gap to be filled later; it's a deliberate exclusion based on what's safe to apply automatically across a folder.
 
 ## Out of scope, not on the roadmap
 

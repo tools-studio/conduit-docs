@@ -18,10 +18,10 @@ Select any folder and click **Add Policy for This Folder**. This creates an `Imp
 |---|---|
 | Folder Path | The folder this policy governs. Set when the policy is created; move the asset's target by editing this field. |
 | Apply to Subfolders | When on, the policy also governs every folder beneath the target. When off, it governs only the target folder itself. |
-| Enforcement Level | `Disabled`, `Warn Only`, or `Block Build`. See [Core Concepts](core-concepts.md). |
+| Enforcement Level | `Disabled`, `Warn Only`, or `Block Build`. See [Core Concepts](../core-concepts.md). |
 | Is Enabled | Turns the whole policy on or off without deleting it. A disabled policy contributes nothing to resolution, even if some of its rules are set. |
 
-Below these, three collapsible rule sets — Texture Rules, Model Rules, Audio Rules — hold the actual governed properties. See [Texture Rules](texture-rules.md), [Model Rules](model-rules.md), and [Audio Rules](audio-rules.md) for what each one controls. Video Rules is visible but not yet enforced — see [Limitations](../reference/limitations.md).
+Below these, three collapsible rule sets — Texture Rules, Model Rules, Audio Rules — hold the actual governed properties. See [Texture Rules](texture-rules.md), [Model Rules](model-rules.md), and [Audio Rules](audio-rules.md) for what each one controls. Video Rules is visible but not yet enforced — see [Limitations](../limitations.md).
 
 ## Conflicts
 

@@ -2,7 +2,7 @@
 
 ## A build fails with "Build blocked: N policy violations found"
 
-This is the Build Gate working as configured — see [Build Gate](build-gate.md). Open the Drift tab, scan, and fix the listed violations, or lower the relevant policy's enforcement level if blocking wasn't intended for it.
+This is the Build Gate working as configured — see [Build Gate](features/build-gate.md). Open the Drift tab, scan, and fix the listed violations, or lower the relevant policy's enforcement level if blocking wasn't intended for it.
 
 ## "Conduit — Policy Conflict" appears on project load
 
@@ -18,7 +18,7 @@ Check that a policy actually targets an ancestor folder of the asset with **Appl
 
 ## Install Demo Content does nothing, or reports an error about an existing folder
 
-Conduit won't touch `Assets/Conduit/Demo/` if that folder already exists with content it didn't create. Rename or remove the conflicting folder and run **Install Demo Content** again. See [Demo Workflow](demo-workflow.md).
+Conduit won't touch `Assets/Conduit/Demo/` if that folder already exists with content it didn't create. Rename or remove the conflicting folder and run **Install Demo Content** again. See [Demo Workflow](features/demo-workflow.md).
 
 ## Still stuck
 

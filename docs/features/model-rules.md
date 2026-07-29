@@ -22,4 +22,4 @@ A static-prop folder commonly wants Import BlendShapes, Import Cameras, Import L
 
 ## What isn't covered
 
-Model Rules apply to Unity's built-in model importer only. LOD generation is a related but separate feature — see the LOD settings on the policy, and note that mesh decimation (reducing polygon count per LOD level, not just hiding renderers) requires a third-party library and isn't available in the current version. See [Limitations](../reference/limitations.md).
+Model Rules apply to Unity's built-in model importer only. LOD generation is a related but separate feature — see the LOD settings on the policy, and note that mesh decimation (reducing polygon count per LOD level, not just hiding renderers) requires a third-party library and isn't available in the current version. See [Limitations](../limitations.md).

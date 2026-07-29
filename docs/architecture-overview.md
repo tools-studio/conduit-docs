@@ -26,8 +26,8 @@ Conduit's Runtime assembly holds policy data types only — `ImportPolicy`, the 
 
 **Automatically, at import time.** An `AssetPostprocessor` intercepts new and reimported assets and applies the resolved policy before the import completes, so assets never exist in an unpolicied state even briefly.
 
-**On demand, via Reimport or Fix.** Already-imported assets that have drifted need an explicit action — Conduit doesn't watch the AssetDatabase continuously for import-setting changes. See [Reimport Workflow](../docs/reimport-workflow.md).
+**On demand, via Reimport or Fix.** Already-imported assets that have drifted need an explicit action — Conduit doesn't watch the AssetDatabase continuously for import-setting changes. See [Reimport Workflow](features/reimport-workflow.md).
 
 ## Where to go deeper
 
-This page covers enough to use the API confidently. The rule-by-rule mechanics live in [Texture Rules](../docs/texture-rules.md), [Audio Rules](../docs/audio-rules.md), and [Model Rules](../docs/model-rules.md).
+This page covers enough to use the API confidently. The rule-by-rule mechanics live in [Texture Rules](features/texture-rules.md), [Audio Rules](features/audio-rules.md), and [Model Rules](features/model-rules.md).

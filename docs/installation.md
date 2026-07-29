@@ -11,7 +11,7 @@ See [Unity Compatibility](../release/version-history.md#unity-compatibility) for
 
 Open **Window › Package Manager**, click **+**, select **Add package from git URL**, and enter:
 
-    https://github.com/afterix-hub/conduit.git?path=/Assets/Conduit
+    https://github.com/afterix-hub/conduit.git?path=/Packages/com.toolsstudio.conduit
 
 The `path` query is required — Conduit's `package.json` lives at `Assets/Conduit` within the repository, not at its root.
 
@@ -21,12 +21,12 @@ A Unity Asset Store listing is planned but not yet live — see [Roadmap](../rel
 
 ## Verifying the install
 
-1. Confirm **Tools Studio › Conduit** appears in the menu bar.
-2. Open **Tools Studio › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, About.
+1. Confirm **Tools › Conduit** appears in the menu bar.
+2. Open **Tools › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, About.
 3. Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. This is expected — it stores your project-level settings.
 
 Conduit is editor-only. It adds nothing to your player builds.
 
 ## Next step
 
-[Quick Start](quick-start.md) — create your first policy.
+[Getting Started](getting-started.md) — create your first policy.

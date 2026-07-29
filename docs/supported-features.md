@@ -12,9 +12,9 @@ Shows the full set of Model, Texture, Audio, and LOD Generation rules Conduit ca
 
 | Category | Governed via | Details |
 |---|---|---|
-| Textures | `TextureImporter` | See [Texture Rules](../docs/texture-rules.md), including per-platform overrides. |
-| Models | `ModelImporter` | See [Model Rules](../docs/model-rules.md). |
-| Audio | `AudioImporter` | See [Audio Rules](../docs/audio-rules.md), including per-platform overrides. |
+| Textures | `TextureImporter` | See [Texture Rules](features/texture-rules.md), including per-platform overrides. |
+| Models | `ModelImporter` | See [Model Rules](features/model-rules.md). |
+| Audio | `AudioImporter` | See [Audio Rules](features/audio-rules.md), including per-platform overrides. |
 | LOD generation | `LODGroup` creation | Hierarchy cloning with configurable screen-relative height thresholds. Does not reduce polygon count per level — see [Limitations](limitations.md). |
 
 ## Workflow features
@@ -25,7 +25,7 @@ Shows the full set of Model, Texture, Audio, and LOD Generation rules Conduit ca
 - Read-only simulation of resolved policy for any single asset
 - Manual reimport with type and drift-only filtering
 - Build-time gate via `IPreprocessBuildWithReport`, with a CI-runnable equivalent (`CIBridge`)
-- Scripted access to every workflow through the `Conduit` static facade — see [API Overview](api-overview.md)
+- Scripted access to every workflow through the `Conduit` static facade — see [API Reference](api-reference.md)
 - Editor-only: contributes nothing to player builds
 
 ## Not governed
