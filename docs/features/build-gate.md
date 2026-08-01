@@ -19,7 +19,7 @@ Run Conduit's gate check in batch mode as part of your CI pipeline:
       -executeMethod ToolsStudio.Conduit.Editor.CIBridge.Run \
       -conduitReport reports/conduit-gate.json
 
-Exit code `0` means no blocking violations. Exit code `1` means one or more `Block Build` violations were found — the JSON report at the path you specified contains the full list. Exit code `2` means the scan itself couldn't complete; check the Editor log. Two more flags are available: `-conduitFolder <path>` scopes the scan to one folder, and `-conduitWarnAsError` makes `Warn Only` violations blocking for that run too. See the full CLI argument list, JSON report schema, and exit code table in [Configuration Reference](../configuration.md).
+Exit code `0` means no blocking violations. Exit code `1` means one or more `Block Build` violations were found — the JSON report at the path you specified contains the full list. Exit code `2` means the scan itself couldn't complete; check the Editor log. Two more flags are available: `-conduitFolder <path>` scopes the scan to one folder, and `-conduitWarnAsError` makes `Warn Only` violations blocking for that run too. See the full CLI argument list, JSON report schema, and exit code table in [Configuration](../configuration.md).
 
 ## Disabling the gate temporarily
 

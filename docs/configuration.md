@@ -1,8 +1,8 @@
-# Configuration Reference
+# Configuration
 
 ## Project settings
 
-Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools › Conduit › Open Window › Settings (gear icon)**.
+Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. Edit it via **Tools Studio › Conduit › Open Window › Settings** (gear icon).
 
 | Setting | Default | Purpose |
 |---|---|---|
@@ -17,15 +17,6 @@ Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it 
 | Define | Effect |
 |---|---|
 | `CONDUIT_CI_SKIP` | Combined with the Suppress Build Gate On CI setting above, skips the build gate. Set this only on the specific CI configuration that runs Conduit's gate check as its own separate step. |
-| `CONDUIT_DEBUG` | Enables `[INFO]` and `[WARN]` diagnostic logging in addition to errors. Set via **Edit › Project Settings › Player › Scripting Define Symbols**. |
-
-## Console error messages
-
-| Message | Meaning |
-|---|---|
-| `[TS][Conduit][ERROR] Scan failed.` | `DriftScanner.ScanAsync()` threw an unhandled exception. Full stack trace follows in the console entry. |
-| `[TS][Conduit][ERROR] Gate check failed.` | The build gate's scan task faulted. Full stack trace follows in the console entry. |
-| `[TS][Conduit][ERROR] Reimport failed.` | `ReimportCoordinator` threw during a reimport. Check the affected asset's path and write permissions. |
 
 ## CIBridge command-line arguments
 
@@ -42,7 +33,7 @@ Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it 
 ```json
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-06-09T12:00:00.0000000Z",
+  "generatedAt": "2026-07-13T12:00:00.0000000Z",
   "wasCompleted": true,
   "summary": {
     "totalViolations": 2,

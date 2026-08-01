@@ -4,28 +4,27 @@
 
 - Unity 2021.3 LTS or later, through Unity 6000.x (build-verified against 6000.3.10f1)
 - No additional packages required
+- Editor-only — Conduit adds nothing to your player builds
 
-See [Unity Compatibility](../release/version-history.md#unity-compatibility) for the full verified version matrix.
+Render pipeline is not a factor: Conduit governs `TextureImporter`, `ModelImporter`, and `AudioImporter` — the asset-import layer — independent of URP, HDRP, or the Built-in pipeline.
 
-## Unity Package Manager (Git URL)
+## Installing from the Unity Asset Store
 
-Open **Window › Package Manager**, click **+**, select **Add package from git URL**, and enter:
+Conduit is distributed exclusively through the [Unity Asset Store](https://assetstore.unity.com/publishers/139782). There is no Git URL or Package Manager registry install path.
 
-    https://github.com/afterix-hub/conduit.git?path=/Packages/com.toolsstudio.conduit
+1. Purchase or acquire Conduit from its Asset Store listing.
+2. In Unity, open **Window › Package Manager**, switch to the **My Assets** tab, find Conduit, and click **Download**, then **Import**.
+3. In the Import dialog, leave every item checked and click **Import**.
 
-The `path` query is required — Conduit's `package.json` lives at `Assets/Conduit` within the repository, not at its root.
-
-## Asset Store
-
-A Unity Asset Store listing is planned but not yet live — see [Roadmap](../release/roadmap.md). Once it ships, Conduit will be importable from the Package Manager's My Assets tab like any other Asset Store package.
+Conduit ships as compiled assemblies (`ToolsStudio.Conduit.dll` and `ToolsStudio.Conduit.Editor.dll`), not editable `.cs` source — see [Licensing & Source Availability](faq.md#does-conduit-include-source-code) in the FAQ for what that means and how to request source-level access.
 
 ## Verifying the install
 
-1. Confirm **Tools › Conduit** appears in the menu bar.
-2. Open **Tools › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, About.
+1. Confirm **Tools Studio › Conduit** appears in the menu bar.
+2. Open **Tools Studio › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, About.
 3. Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. This is expected — it stores your project-level settings.
 
-Conduit is editor-only. It adds nothing to your player builds.
+If the menu item doesn't appear or the window fails to open, see [Troubleshooting](troubleshooting.md#conduit-doesnt-appear-in-the-menu-bar-after-import).
 
 ## Next step
 

@@ -1,16 +1,16 @@
-# Quick Start
+# Getting Started
 
-This walks through governing one folder, start to finish. It takes about five minutes.
+This walks through governing one folder, start to finish. It takes about five minutes. It assumes Conduit is already imported into your project — see [Installation](installation.md) if you haven't done that yet.
 
 ## Option A — use the demo content
 
-If you'd rather see Conduit working before setting up your own policies, run **Tools › Conduit › Demo › Install Demo Content**. This generates a small set of sample assets with policies already applied and intentional drift already present, so **Drift › Scan Project** immediately has something to show you. Nothing is installed until you run this command. See [Demo Workflow](features/demo-workflow.md) for details.
+If you'd rather see Conduit working before setting up your own policies, run **Tools Studio › Conduit › Demo › Install Demo Content**. This generates a small set of sample assets with policies already applied and intentional drift already present, so **Drift › Scan Project** immediately has something to show you. Nothing is installed until you run this command. See [Demo Workflow](features/demo-workflow.md) for details.
 
 ## Option B — govern your own folder
 
 ### 1. Create a policy
 
-Open **Tools › Conduit › Open Window**, go to the **Policies** tab, select a folder in the tree (for example `Assets/Textures`), and click **Add Policy for This Folder**.
+Open **Tools Studio › Conduit › Open Window**, go to the **Policies** tab, select a folder in the tree (for example `Assets/Textures`), and click **Add Policy for This Folder**.
 
 ### 2. Turn on the rules you care about
 
@@ -30,5 +30,5 @@ Back in the Policies tab, set **Enforcement Level** to `Block Build`. Now a buil
 
 ## What's next
 
-- [Core Concepts](core-concepts.md) — how cascading and enforcement actually work
+- [Core Concepts](features/core-concepts.md) — how cascading and enforcement actually work
 - [Texture Rules](features/texture-rules.md), [Audio Rules](features/audio-rules.md), [Model Rules](features/model-rules.md) — every rule Conduit supports, per category
