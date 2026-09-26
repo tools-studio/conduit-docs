@@ -1,75 +1,221 @@
 # API Reference
 
-Everything Conduit exposes to your own editor scripts lives on the static `ToolsStudio.Conduit.Editor.Conduit` class. It's editor-only — none of it is callable from a player build.
+Everything Conduit exposes to your own Editor scripts lives on the static `ToolsStudio.Conduit.Editor.Conduit` class. It is Editor-only. None of it is callable from a player build.
 
-## Policy resolution
+Add the namespace to your Editor script:
 
-**Description.** Resolves the full cascading policy chain for an asset path and returns the merged result — the same resolution used internally for import-time application, drift scanning, and simulation.
+```csharp
+using ToolsStudio.Conduit.Editor;
+```
+
+## ResolvePolicy
+
+Resolves the full cascading policy chain for an asset path and returns the merged result. This is the same resolution used for import-time application, drift scanning, and simulation.
+
+```csharp
+public static ResolvedPolicy ResolvePolicy(string assetPath)
+```
+
+**Parameters**
+
+- `assetPath`: the asset path, for example `Assets/Textures/UI/icon.png`. Must not be empty.
+
+**Returns** a `ResolvedPolicy`.
+
+**Example**
 
 ```csharp
 ResolvedPolicy policy = Conduit.ResolvePolicy("Assets/Textures/UI/icon.png");
 ```
 
-Also available: `GetAllPolicies()` to list every `ImportPolicy` in the project, and `RebuildPolicyGraph()` to force a rebuild if you've changed policy assets through a script rather than the Editor UI.
+**Notes** Throws `ArgumentException` if `assetPath` is null, empty, or whitespace.
 
-**Notes.** See [Core Concepts](features/core-concepts.md) for how the cascade and enforcement levels resolve.
+## GetAllPolicies
 
-## Simulation
+Lists every policy asset in the project.
 
-**Description.** Returns the same information the Simulation tab shows: every governed property, its resolved value, and which policy set it. Read-only.
+```csharp
+public static IReadOnlyList<ImportPolicy> GetAllPolicies()
+```
+
+**Returns** a read-only list of `ImportPolicy` assets.
+
+## RebuildPolicyGraph
+
+Forces Conduit to rebuild its view of the project's policies. Call it if you changed policy assets from a script rather than through the Editor interface.
+
+```csharp
+public static void RebuildPolicyGraph()
+```
+
+**Notes** The rebuild runs synchronously on the calling thread.
+
+## Simulate
+
+Returns what the Simulation tab shows: every governed property, its resolved value, and which policy set it. Read-only. See [Simulation](features/simulation.md).
+
+```csharp
+public static SimulationResult Simulate(string assetPath)
+```
+
+**Parameters**
+
+- `assetPath`: the asset path to simulate. Must not be empty.
+
+**Returns** a `SimulationResult`.
+
+**Example**
 
 ```csharp
 SimulationResult result = Conduit.Simulate("Assets/Textures/UI/icon.png");
 ```
 
-**Notes.** See [Simulation](features/simulation.md).
+**Notes** Throws `ArgumentException` if `assetPath` is null, empty, or whitespace.
 
-## Drift scanning
+## ScanForDriftAsync
 
-**Description.** Scans for assets whose current import settings don't match their governing policy. Runs asynchronously with the same progress reporting and cancellation the Drift tab uses internally.
+Scans the whole project for drift.
+
+```csharp
+public static Task<DriftReport> ScanForDriftAsync(
+    IProgress<DriftScanProgress> progress = null,
+    CancellationToken cancellation = default)
+```
+
+**Parameters**
+
+- `progress`: optional progress reporting, the same the Drift tab uses.
+- `cancellation`: optional cancellation token.
+
+**Returns** a task that produces a `DriftReport`.
+
+**Example**
 
 ```csharp
 DriftReport report = await Conduit.ScanForDriftAsync();
+```
+
+## ScanFolderAsync
+
+Scans a single folder for drift instead of the whole project.
+
+```csharp
+public static Task<DriftReport> ScanFolderAsync(
+    string folderPath,
+    IProgress<DriftScanProgress> progress = null,
+    CancellationToken cancellation = default)
+```
+
+**Parameters**
+
+- `folderPath`: the folder to scan, for example `Assets/Textures`. Must not be empty.
+- `progress`: optional progress reporting.
+- `cancellation`: optional cancellation token.
+
+**Returns** a task that produces a `DriftReport`.
+
+**Example**
+
+```csharp
 DriftReport folderReport = await Conduit.ScanFolderAsync("Assets/Textures");
 ```
 
-**Parameters.** `ScanFolderAsync` takes a project-relative folder path to scope the scan instead of scanning the whole project.
+**Notes** Throws `ArgumentException` if `folderPath` is null, empty, or whitespace.
 
-**Notes.** See [Drift Detection](features/drift-detection.md).
+## ReimportAssetsAsync
 
-## Reimport
-
-**Description.** Applies policy and reimports the given assets, or every asset present in a `DriftReport`. This is the scripted equivalent of the Reimport tab's Apply Policy + Reimport action — it overwrites current import settings the same way.
+Applies policy to the given assets and reimports them. This is the scripted equivalent of the Reimport tab's Apply Policy + Reimport action, and it overwrites current import settings the same way. See [Reimport Workflow](features/reimport-workflow.md).
 
 ```csharp
-ReimportResult result = await Conduit.ReimportAssetsAsync(new[] { "Assets/Textures/UI/icon.png" });
+public static Task<ReimportResult> ReimportAssetsAsync(
+    IReadOnlyList<string> assetPaths,
+    string jobLabel,
+    IProgress<ReimportProgress> progress = null,
+    CancellationToken cancellation = default)
+```
+
+**Parameters**
+
+- `assetPaths`: the asset paths to reimport. Must not be null or empty.
+- `jobLabel`: a label for this reimport job.
+- `progress`: optional progress reporting.
+- `cancellation`: optional cancellation token.
+
+**Returns** a task that produces a `ReimportResult`.
+
+**Example**
+
+```csharp
+ReimportResult result = await Conduit.ReimportAssetsAsync(
+    new[] { "Assets/Textures/UI/icon.png" }, "MyReimport");
+```
+
+**Notes** Throws `ArgumentNullException` if `assetPaths` is null, and `ArgumentException` if it is empty.
+
+## ReimportDriftingAssetsAsync
+
+Applies policy to, and reimports, every asset that appears in a `DriftReport`. An asset with several violations is reimported once.
+
+```csharp
+public static Task<ReimportResult> ReimportDriftingAssetsAsync(
+    DriftReport driftReport,
+    IProgress<ReimportProgress> progress = null,
+    CancellationToken cancellation = default)
+```
+
+**Parameters**
+
+- `driftReport`: a report returned by one of the scan methods. Must not be null.
+- `progress`: optional progress reporting.
+- `cancellation`: optional cancellation token.
+
+**Returns** a task that produces a `ReimportResult`. If the report has no violations, the result is empty.
+
+**Example**
+
+```csharp
 ReimportResult result = await Conduit.ReimportDriftingAssetsAsync(report);
 ```
 
-**Notes.** See [Reimport Workflow](features/reimport-workflow.md).
+## RunBuildGateCheck
 
-## Build Gate
+Runs the same synchronous check the build gate runs automatically before a build. Use it in a custom pre-build script to check gate status without starting a build. See [Build Gate](features/build-gate.md).
 
-**Description.** Runs the same synchronous, non-blocking check Unity's build pipeline runs automatically via `IPreprocessBuildWithReport`. Useful for a custom pre-build script that wants to check gate status without triggering an actual build.
+```csharp
+public static GateValidationResult RunBuildGateCheck()
+```
+
+**Returns** a `GateValidationResult`. Its `WillBlockBuild` property is `true` when at least one Block Build violation exists.
+
+**Example**
 
 ```csharp
 GateValidationResult result = Conduit.RunBuildGateCheck();
-if (result.WillBlockBuild) { /* ... */ }
+if (result.WillBlockBuild) { /* handle */ }
 ```
 
-**Notes.** See [Build Gate](features/build-gate.md) for the interactive tab, and [Configuration](configuration.md) for the CI command-line interface, JSON report schema, and exit codes.
+## GetSettings
 
-## Settings
-
-**Description.** Reads the project's Conduit settings.
+Returns the project's Conduit settings asset.
 
 ```csharp
-ConduitProjectSettings settings = Conduit.GetSettings();
+public static ConduitProjectSettings GetSettings()
+```
+
+## IsEnabled
+
+A shortcut for the Conduit Enabled setting.
+
+```csharp
+public static bool IsEnabled { get; }
+```
+
+**Example**
+
+```csharp
 bool enabled = Conduit.IsEnabled;
 ```
 
-`GetSettings()` returns the project's `ConduitProjectSettings` singleton asset. `IsEnabled` is a shortcut for its `ConduitEnabled` field.
-
 ## Return types
 
-`ResolvedPolicy`, `SimulationResult`, `DriftReport`, `ReimportResult`, and `GateValidationResult` are plain data types — no methods, safe to inspect and serialize for your own reporting. See [Configuration](configuration.md) for the JSON shape used by `CIBridge`, which mirrors `DriftReport` and `GateValidationResult` closely.
+`ResolvedPolicy`, `SimulationResult`, `DriftReport`, `ReimportResult`, and `GateValidationResult` are plain result objects that you can inspect and use in your own reporting. The JSON report written by the command-line runner closely mirrors the drift report and gate result. See [Configuration](configuration.md).

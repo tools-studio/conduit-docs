@@ -1,31 +1,54 @@
 # Installation
 
+Conduit is a paid product distributed through the Unity Asset Store. Install it from your Unity account's purchased assets.
+
 ## Requirements
 
-- Unity 2021.3 LTS or later, through Unity 6000.x (build-verified against 6000.3.10f1)
-- No additional packages required
-- Editor-only — Conduit adds nothing to your player builds
+- A Conduit purchase on the Unity Asset Store, made with the Unity account you use in the Editor
+- Unity 6000.3.10f1 (verified). See Compatibility below.
+- No additional packages
 
-Render pipeline is not a factor: Conduit governs `TextureImporter`, `ModelImporter`, and `AudioImporter` — the asset-import layer — independent of URP, HDRP, or the Built-in pipeline.
+## Install from the Asset Store
 
-## Installing from the Unity Asset Store
+1. In Unity, sign in with the Unity account that purchased Conduit.
+2. Open **Window › Package Manager**.
+3. Set the package source to **My Assets**.
+4. Select **Conduit** and click **Download**.
+5. When the download finishes, click **Import**.
+6. In the import dialog, leave every item selected and click **Import**.
 
-Conduit is distributed exclusively through the [Unity Asset Store](https://assetstore.unity.com/publishers/139782). There is no Git URL or Package Manager registry install path.
+Conduit installs into `Assets/Conduit/`. The package contains the Conduit Runtime and Editor C# source, offline documentation, a README, and a changelog.
 
-1. Purchase or acquire Conduit from its Asset Store listing.
-2. In Unity, open **Window › Package Manager**, switch to the **My Assets** tab, find Conduit, and click **Download**, then **Import**.
-3. In the Import dialog, leave every item checked and click **Import**.
+## Verify the install
 
-Conduit ships as compiled assemblies (`ToolsStudio.Conduit.dll` and `ToolsStudio.Conduit.Editor.dll`), not editable `.cs` source — see [Licensing & Source Availability](faq.md#does-conduit-include-source-code) in the FAQ for what that means and how to request source-level access.
+1. Confirm that **Tools › Conduit** appears in the menu bar.
+2. Open **Tools › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, and About.
+3. Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. This is expected. It stores your project-level settings.
 
-## Verifying the install
+Conduit is Editor-only. It adds nothing to your player builds.
 
-1. Confirm **Tools Studio › Conduit** appears in the menu bar.
-2. Open **Tools Studio › Conduit › Open Window**. The Conduit window opens with six tabs: Policies, Drift, Simulation, Reimport, Build Gate, About.
-3. Conduit creates `Assets/Conduit/ConduitProjectSettings.asset` the first time it runs. This is expected — it stores your project-level settings.
+## Compatibility
 
-If the menu item doesn't appear or the window fails to open, see [Troubleshooting](troubleshooting.md#conduit-doesnt-appear-in-the-menu-bar-after-import).
+| Item | Status |
+|---|---|
+| Unity Editor | Verified on 6000.3.10f1 |
+| Other Unity versions | Not verified. Additional Editor verification is required before compatibility is claimed. |
+| Render pipelines | Not separately verified |
+| Player platforms | Not applicable. Conduit is Editor-only and adds nothing to player builds. |
+| Editor host operating systems | Not separately verified |
+
+Conduit is version 1.0.0. If you use a Unity version other than the verified one, treat the result as untested and report what you find through the support channels below.
+
+## Updating
+
+Updates are delivered through the Unity Asset Store. Open **Window › Package Manager**, choose **My Assets**, and update Conduit when a newer version is listed. Your policies and settings live in your own project under `Assets/Conduit/`.
+
+## Getting help
+
+[![Support](https://img.shields.io/badge/Support-24292f?style=for-the-badge)](https://discord.gg/tF4NSVkW6U) [![Discord](https://img.shields.io/badge/Discord-24292f?style=for-the-badge)](https://discord.gg/uaHe32VsyN)
+
+[![Report Issue](https://img.shields.io/badge/Report%20Issue-24292f?style=for-the-badge)](https://discord.gg/XPMGcdnpmn) [![Feature Request](https://img.shields.io/badge/Feature%20Request-24292f?style=for-the-badge)](https://discord.gg/Ge99xqt5qr) [![Email Support](https://img.shields.io/badge/Email%20Support-24292f?style=for-the-badge)](mailto:support.toolsstudio@gmail.com)
 
 ## Next step
 
-[Getting Started](getting-started.md) — create your first policy.
+[Getting Started](getting-started.md): create your first policy.

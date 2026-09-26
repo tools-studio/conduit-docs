@@ -1,33 +1,58 @@
 # Overview
 
-Conduit is policy-driven asset import governance for Unity. You define per-folder rules once for texture, model, and audio import settings, and Conduit keeps every asset in that folder — and its subfolders — compliant with them automatically.
+Conduit is a Unity Editor tool that governs asset import settings by folder. You define a policy once for a folder, and Conduit keeps every texture, model, and audio clip in that folder, and its subfolders, compliant with it.
 
-## The problem this solves
+This documentation covers Conduit 1.0.0.
 
-Import settings drift over time. Someone changes a texture's compression to test something, forgets to revert it, and it ships that way. A new artist adds assets without knowing the project's conventions. Nobody notices until a build is larger than it should be or a platform behaves inconsistently. Conduit replaces manual conventions and hand-rolled `AssetPostprocessor` scripts with a folder-scoped policy system: define the rules once, and every asset in scope is checked, applied, and kept in sync.
+## The problem Conduit solves
 
-## Key Capabilities
+Import settings drift over time. Someone changes a texture's compression to test something, forgets to revert it, and it ships that way. A new artist adds assets without knowing the project's conventions. Nobody notices until a build is larger than it should be or a platform behaves inconsistently.
 
-- **Folder-scoped, cascading policies** — define rules once per folder, with per-property opt-in and inheritance down the folder tree.
-- **Three enforcement levels** — `Disabled`, `Warn Only`, or `Block Build`, chosen per policy.
-- **Drift detection** — scan a project (or one folder) for assets whose import settings no longer match policy, with one-click or bulk fixes.
-- **Simulation** — preview exactly what Conduit would apply to a specific asset, and which policy set each value, without touching anything.
-- **Reimport** — apply policy and reimport a chosen set of assets in one action, independent of a drift scan, with a before/after size summary.
-- **Build Gate** — block or warn on policy violations at build time, with a CI-runnable equivalent (`CIBridge`) for headless pipelines.
-- **Scripted access** — every workflow above is also available through a static C# facade; see [API Reference](api-reference.md).
-- **Editor-only** — Conduit's runtime assembly holds policy data types only; nothing it does contributes to a player build.
+Conduit replaces manual conventions and hand-written import scripts with a folder-scoped policy system: define the rules once, and every asset in scope is checked, applied, and kept in sync.
 
-## Screenshots
+## Key capabilities
 
-![Conduit policy editor showing folder-scoped audio rules](images/screenshot-01-policies.png)
+- Folder-scoped, cascading policies with per-property opt-in
+- Texture, Model, and Audio import rules, with per-platform overrides for textures and audio
+- LOD generation by hierarchy cloning at configurable screen-relative heights
+- Three enforcement levels: Disabled, Warn Only, and Block Build
+- Asynchronous, cancellable drift scanning across the whole project or a single folder
+- Read-only simulation of the resolved policy for any single asset
+- Manual reimport with type and drift-only filtering
+- A build gate that stops non-compliant builds, with a command-line equivalent for CI
+- Scripted access to every workflow from your own Editor scripts
+- Editor-only: Conduit adds nothing to your player builds
 
-The Policies tab governing a folder's audio rules — the folder tree on the left shows policy coverage at a glance, while the panel on the right toggles individual rules, each governed by an enforcement level of `Disabled`, `Warn Only`, or `Block Build`.
+<p align="center">
+  <img src="images/screenshot-01-policies.png" width="800" alt="Conduit policy editor showing folder-scoped audio rules">
+</p>
 
-![Conduit drift scan results and import simulation cascade trace](images/screenshot-02-drift-and-simulation.png)
+The Policies tab: the folder tree on the left shows policy coverage, and the panel on the right toggles individual rules. Each rule is opt-in, and the whole policy carries one enforcement level.
 
-The Drift tab (top) lists every violation found by a project scan, with a one-click Fix per row. The Simulation tab (bottom) shows the effective policy for any asset, including which policy asset and folder each property is inherited from.
+## Distribution and licensing
 
-## Quick Links
+Conduit is a paid, proprietary Unity Editor tool distributed through the Unity Asset Store and licensed under the Unity Asset Store EULA. The Asset Store package includes the Conduit Runtime and Editor C# source. The development GitHub repository that produces it is private, and access to it is provided separately to authorized users.
 
-- [Getting Started](getting-started.md) — your first policy, in under five minutes
-- [API Reference](api-reference.md) — scripted access to every Conduit workflow
+## Compatibility
+
+Verified on Unity 6000.3.10f1. Other Unity versions have not been verified; additional Editor verification is required before compatibility with them is claimed.
+
+See [Installation](installation.md) for the full compatibility statement.
+
+## Known limitations
+
+- Video import settings appear in a policy but are not enforced. Video rules are planned for a future release.
+- LOD generation does not reduce polygon count. Each LOD level uses the same mesh as the source.
+- A policy governs a folder. There is no way to exempt a single asset inside an otherwise governed folder.
+- Conduit applies policy at import time and on an explicit Reimport or Fix action. It does not watch already-imported assets in the background.
+- Model Rules have no per-platform overrides.
+- Two audio settings, Normalize and Ambisonic, are intentionally not exposed as rules. See [Audio Rules](features/audio-rules.md).
+- Only textures, models, and audio are governed. Other asset types are untouched.
+
+## Quick links
+
+- [Getting Started](getting-started.md)
+- [Installation](installation.md)
+- [Policies](features/policies.md)
+- [Troubleshooting](troubleshooting.md)
+- [FAQ](faq.md)
